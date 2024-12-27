@@ -31,7 +31,28 @@ img {
         p {
           text-align: center;
           margin: 0;
-          color: #212529; /* Dark text for better readability */
+          color: #212529;
+        }
+
+        // Mobile styles
+        @media (max-width: 767px) {
+          padding: 0.5rem;
+
+          h5 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+          }
+
+          p {
+            font-size: 0.75rem;
+            line-height: 1.2;
+            margin: 0;
+            // Optional: limit text to 3 lines on mobile
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
         }
       }
     }
