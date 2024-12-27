@@ -1,0 +1,27 @@
+.nav-bg-container {
+  background-color: #e7f1ff;
+}
+
+nav .nav-link:hover {
+  background: rgba(226, 229, 227, 0.7);
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: calc(22px);
+}
+
+.active {
+  background-color: rgba(226, 229, 227, 0.5);
+}
+
+span {
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media only screen and (max-width: 780px) {
+  nav img {
+    max-width: 160px;
+  }
+}

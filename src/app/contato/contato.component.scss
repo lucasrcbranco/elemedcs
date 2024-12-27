@@ -1,0 +1,110 @@
+.contatos {
+  background-color: #e7f1ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    color: #000;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      flex-shrink: 1;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 250px;
+      justify-content: center;
+      height: 100%;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+
+        i {
+          font-size: 1.25rem;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        &[href*="wa.me"] {
+          background-color: #25d366;
+
+          &:hover {
+            background-color: darken(#25d366, 10%);
+          }
+        }
+
+        &[href^="tel:"] {
+          background-color: #0d6efd;
+
+          &:hover {
+            background-color: darken(#0d6efd, 10%);
+          }
+        }
+
+        &[href*="instagram.com"] {
+          background-color: #e4405f;
+
+          &:hover {
+            background-color: darken(#e4405f, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      align-items: center;
+
+      iframe {
+        height: 300px;
+      }
+
+      .contact-links {
+        width: 100%;
+        height: auto;
+
+        a {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

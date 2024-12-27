@@ -1,0 +1,30 @@
+<div class="nav-bg-container">
+  <nav class="navbar navbar-expand-md container-sm px-5 d-flex flex-wrap justify-content-evenly user-select-none">
+    <a href="#" class="navbar-brand">
+      <img class="img-fluid w-25 h-25" src="../../assets/logo.svg">
+    </a>
+    <div>
+      <button class="navbar-toggler bg-info-subtle" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li (click)="setActive($event)" class="nav-item"> <a #navLink
+              class="nav-link p-2 m-1 active rounded">Início</a>
+          </li>
+          <li (click)="setActive($event)" (click)="onClick('sobre')" class="nav-item"> <a #navLink
+              class="nav-link p-2 m-1 rounded">Sobre</a>
+          </li>
+          <li (click)="setActive($event)" (click)="onClick('servicos')" class="nav-item"> <a #navLink
+              class="nav-link p-2 m-1 rounded">Servicos</a>
+          </li>
+          <li (click)="setActive($event)" (click)="onClick('contatos')" class="nav-item"> <a #navLink
+              class="nav-link p-2 m-1 rounded">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

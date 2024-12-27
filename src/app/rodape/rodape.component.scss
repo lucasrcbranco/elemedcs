@@ -1,0 +1,48 @@
+.footer {
+  background-color: #343a40; // Dark gray background
+  color: #ffffff; // White text
+  padding: 20px 0;
+
+  .footer-wrapper {
+    background-color: inherit; // Ensures background matches parent
+    width: 100%; // Full width wrapper
+
+    .container {
+      padding: 0; // Ensure no extra padding
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-brand {
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 0;
+        color: #f8f9fa; // Light gray color
+      }
+
+      p {
+        font-size: 0.875rem;
+        margin: 0;
+        color: #adb5bd; // Lighter gray for text
+      }
+    }
+  }
+
+  // Media query for small screens
+  @media (max-width: 576px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+
+      .footer-brand {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
