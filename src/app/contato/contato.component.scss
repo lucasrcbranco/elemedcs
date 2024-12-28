@@ -16,6 +16,15 @@
     font-weight: 600;
     text-align: center;
     width: 100%;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
+      background-color: #3498db;
+      margin: 4px auto;
+    }
   }
 
   .contact-content {

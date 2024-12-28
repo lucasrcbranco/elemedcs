@@ -18,14 +18,19 @@
   .container {
     display: flex;
     flex-wrap: wrap; /* Allows items to stack on smaller screens */
-    justify-content: center;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    justify-content: space-between; /* Ensures equal spacing */
     gap: 20px; /* Space between cards */
+    align-items: stretch; /* Ensures all cards stretch to the same height */
   }
 
   .servicosItem {
-    flex: 1 1 100%; /* Each card takes full width on small screens */
-    max-width: 100%; /* Prevent overflow */
+    flex: 1 1 calc(50% - 20px); /* Set 2 cards per row on larger screens */
+    max-width: calc(
+      50% - 20px
+    ); /* Adjust the max-width to match 50% of the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content fills the space evenly */
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,9 +38,9 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    @media (min-width: 768px) {
-      flex: 1 1 calc(33.333% - 20px); /* Switch back to 3-column layout on larger screens */
-      max-width: 300px;
+    @media (max-width: 768px) {
+      flex: 1 1 100%; /* Full width on smaller screens */
+      max-width: 100%;
     }
 
     &:hover {
@@ -45,24 +50,25 @@
 
     img {
       width: 100%;
-      height: auto; /* Maintain aspect ratio */
-      min-height: 260px;
+      height: 200px; /* Fixed height for images to ensure uniformity */
       object-fit: cover;
       border: 2px solid #6494c7;
     }
 
     h2 {
       margin: 0;
-      padding: 15px 10px;
+      padding: 15px;
       background: #87a7ca;
       color: #0f4671;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       border-top: 2px solid #6494c7;
+      text-align: center;
     }
 
     p {
-      padding: 15px 10px;
+      min-height: 160px;
+      padding: 15px;
       margin: 0;
       background: #e9ecef;
       color: #333;
@@ -70,6 +76,7 @@
       line-height: 1.6;
       border-top: 2px solid #6494c7;
       word-wrap: break-word; /* Prevent text from breaking the layout */
+      flex-grow: 1; /* Ensures the paragraph stretches to fill space */
     }
   }
 }
